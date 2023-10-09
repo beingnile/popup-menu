@@ -1,0 +1,7 @@
+# render.yaml
+
+services:
+  - name: static-website
+    type: static
+    buildCommand: echo "No build step needed"
+    publishDir: .
