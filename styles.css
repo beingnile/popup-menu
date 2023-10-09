@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling when the popup is open */
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    transform: scale(0); /* Start with a scale of 0, hidden */
+    opacity: 0;
+    animation: popupAnimation 0.5s ease-in-out forwards; /* Animate the popup */
+}
+
+.popup img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes popupAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
